@@ -1,0 +1,2 @@
+rootProject.name='AG Devre Elemanları'
+include ':app'

@@ -1,0 +1,116 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.ar.sceneform.plugin'
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        applicationId "com.example.agdevreelemanlari"
+        minSdkVersion 25
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation "com.google.ar.sceneform:animation:1.15.0"
+    implementation 'com.google.ar.sceneform:core:1.15.0'
+    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.15.0'
+
+
+}
+
+
+
+
+sceneform.asset('sampledata/resistor/resistor.obj', // 'Source Asset Path' specified during import.
+        'default',                    // 'Material Path' specified during import.
+        'sampledata/resistor/resistor.sfa', // '.sfa Output Path' specified during import.
+        'src/main/assets/resistor')
+
+sceneform.asset('sampledata/kapasitor/kapasitor.obj', // 'Source Asset Path' specified during import.
+        'default',                    // 'Material Path' specified during import.
+        'sampledata/kapasitor/kapasitor.sfa', // '.sfa Output Path' specified during import.
+        'src/main/assets/kapasitor')
+
+sceneform.asset('sampledata/bobin/bobin.obj', // 'Source Asset Path' specified during import.
+        'default',                    // 'Material Path' specified during import.
+        'sampledata/bobin/bobin.sfa', // '.sfa Output Path' specified during import.
+        'src/main/assets/bobin')
+
+sceneform.asset('sampledata/diyot/diyot.obj', // 'Source Asset Path' specified during import.
+        'default',                    // 'Material Path' specified during import.
+        'sampledata/diyot/diyot.sfa', // '.sfa Output Path' specified during import.
+        'src/main/assets/diyot')
+
+sceneform.asset('sampledata/termistor/termistor.obj', // 'Source Asset Path' specified during import.
+        'default',                    // 'Material Path' specified during import.
+        'sampledata/termistor/termistor.sfa', // '.sfa Output Path' specified during import.
+        'src/main/assets/termistor')
+
+sceneform.asset('sampledata/ldr/ldr.obj', // 'Source Asset Path' specified during import.
+        'default',                    // 'Material Path' specified during import.
+        'sampledata/ldr/ldr.sfa', // '.sfa Output Path' specified during import.
+        'src/main/assets/ldr')
+
+sceneform.asset('sampledata/potansiyometre/potansiyometre.obj', // 'Source Asset Path' specified during import.
+        'default',                    // 'Material Path' specified during import.
+        'sampledata/potansiyometre/potansiyometre.sfa', // '.sfa Output Path' specified during import.
+        'src/main/assets/potansiyometre')
+
+sceneform.asset('sampledata/transistor/transistor.obj', // 'Source Asset Path' specified during import.
+        'default',                    // 'Material Path' specified during import.
+        'sampledata/transistor/transistor.sfa', // '.sfa Output Path' specified during import.
+        'src/main/assets/transistor')
+
+sceneform.asset('sampledata/entegre/entegre.obj', // 'Source Asset Path' specified during import.
+        'default',                    // 'Material Path' specified during import.
+        'sampledata/entegre/entegre.sfa', // '.sfa Output Path' specified during import.
+        'src/main/assets/entegre')
+
+sceneform.asset('sampledata/opamp/opamp.obj', // 'Source Asset Path' specified during import.
+        'default',                    // 'Material Path' specified during import.
+        'sampledata/opamp/opamp.sfa', // '.sfa Output Path' specified during import.
+        'src/main/assets/opamp')
+
+sceneform.asset('sampledata/senkron/senkron.obj', // 'Source Asset Path' specified during import.
+        'default',                    // 'Material Path' specified during import.
+        'sampledata/senkron/senkron.sfa', // '.sfa Output Path' specified during import.
+        'src/main/assets/senkron')
+
+sceneform.asset('sampledata/senkronsplit/senkronsplit.obj', // 'Source Asset Path' specified during import.
+        'default',                    // 'Material Path' specified during import.
+        'sampledata/senkronsplit/senkronsplit.sfa', // '.sfa Output Path' specified during import.
+        'src/main/assets/senkronsplit')
+
+sceneform.asset('sampledata/asenkron/asenkron.obj', // 'Source Asset Path' specified during import.
+        'default',                    // 'Material Path' specified during import.
+        'sampledata/asenkron/asenkron.sfa', // '.sfa Output Path' specified during import.
+        'src/main/assets/asenkron')
+
+sceneform.asset('sampledata/asenkronsplit/asenkronsplit.obj', // 'Source Asset Path' specified during import.
+        'default',                    // 'Material Path' specified during import.
+        'sampledata/asenkronsplit/asenkronsplit.sfa', // '.sfa Output Path' specified during import.
+        'src/main/assets/asenkronsplit')
